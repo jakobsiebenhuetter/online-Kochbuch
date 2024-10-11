@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('includes/head') %>
+</head>
+<body>
+    <%- include('includes/header') %>
+
+    <form action="/login" method="POST">
+        <p>Login</p>
+
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+
+        <label for="password">Passwort</label>
+        <input type="password" id="password" name="password" required>
+
+
+
+        <button type="submit">Login</button>
+</body>
+</html>

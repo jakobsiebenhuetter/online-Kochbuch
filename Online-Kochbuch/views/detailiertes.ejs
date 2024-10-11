@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <%- include('includes/head') %>  
+
+</head>
+<body>
+
+    <%- include('includes/header') %>
+
+    Detailierte infos übers Rezept
+
+ 
+        <p><%= rezept.Name %></p>
+        <img src="/<%= rezept.Pfad_Bild %>" alt="Bild-des-Gerichts" style="width:700px" >
+            <p><%= rezept.Beschreibung %></p>
+
+            <h3>Folgende Zutaten sind vorhanden:</h3>
+
+          <% for(const zutat of zutaten) {%>
+
+          <% if(zutat.id_zutaten !== null)  {%>
+
+            <p><%= zutat.Zutaten %></p>
+            <% } else { %>
+                <p>Keine Zutaten vorhanden</p>
+         <%  } }  %>
+
+          
+       
+   
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('includes/head') %>
+</head>
+<body>
+
+  <%- include('includes/header') %>
+
+   <main>
+
+
+  <p>Es sind <%= countRezept %> Rezepte vorhanden</p> 
+
+        <div class="carousel-content">
+
+
+         <% for (const rezept of allRezepts) { %>
+         
+         <div id="rezept-image">
+
+           <p><%= rezept.Name %></p>
+           
+           
+           <a href="/detailiertes-gericht/<%= rezept.id_Rezept %>"><p>Details</p>
+            
+            <img src="/<%= rezept.Pfad_Bild %>" alt="pasta-machine">
+            
+          </a>
+          
+        </div>
+
+           <% } %>
+      
+        </div>
+  
+      </main>
+
+
+</body>
+</html>
